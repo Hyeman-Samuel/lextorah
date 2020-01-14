@@ -49,4 +49,5 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports.languages=Router;
+module.exports={"languages":Router,
+                 "LanguageDocument":Languages};

@@ -10,10 +10,10 @@ Router.post("/",async(req,res)=>{
     try{
     const courseTypes =new CourseTypes(req.body);
     await courseTypes.save();
+    res.send(courseTypes);
       }catch(err){
      //logger
-      }
-    res.send(courseTypes);
+      }    
 });
 
 Router.get("/",async(req,res)=>{
@@ -48,4 +48,5 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports.courseTypes=Router;
+module.exports={"courseTypes":Router,
+               "CourseTypeDocument":CourseTypes};
