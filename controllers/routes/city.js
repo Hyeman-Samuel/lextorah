@@ -48,5 +48,7 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports={"cities":Router,
-                 "CityDocument":Cities};
+module.exports={
+  "cities":Router,
+   "CityDocument":Cities
+  };
