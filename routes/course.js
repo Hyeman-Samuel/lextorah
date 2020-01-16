@@ -1,8 +1,7 @@
 const express = require('express');
 const Mongoose=require('mongoose');
 const Router= express.Router();
-const {courseSchemas,CourseValidation}=require('../models/courseModel');
-const Courses= Mongoose.model('Courses',courseSchemas);
+const {CourseValidation,Courses}=require('../models/courseModel');
 Router.post("/",async(req,res)=>{ 
     const { error,NotFoundError }= await CourseValidation(req.body);
     if (error) return res.status(400).send(error.details[0].message);

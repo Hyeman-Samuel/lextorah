@@ -24,6 +24,10 @@
     "joi-objectid": "^3.0.1",
     "lodash": "^4.17.15",
     "mongoose": "^5.8.7",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.2"
   }
 }

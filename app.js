@@ -7,11 +7,14 @@ const {cities}=require('./routes/city');
 const {course}=require('./routes/course');
 const {courseLevels}=require('./routes/courseLevel');
 const {courseTypes}=require('./routes/courseType');
+const {enroll}=require('./routes/enroll');
 const app =Express();
+const path =require("path");
 app.use(BodyParser.urlencoded());
 app.engine("hbs",ExpHandleBars());
 app.set("view engine","hbs");
 app.use(Express.json());
+app.use("/public",Express.static("public"));
 Mongoose.connect("mongodb://localhost:27017/lextorah").then(()=>{
 ////Database Connected 
 console.log("connected");
@@ -25,6 +28,7 @@ app.use('/city',cities);
 app.use('/courselevel',courseLevels);
 app.use('/course',course);
 app.use('/coursetype',courseTypes);
+app.use('/enroll',enroll);
 
 
 app.listen(3000,()=>{console.log("listening");})

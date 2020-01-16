@@ -1,9 +1,9 @@
 const express = require('express');
 const Mongoose=require('mongoose');
 const Router= express.Router();
-const {CourseType,CourseTypeValidation}=require('../models/courseOptions');
+const {CourseTypeValidation,CourseTypes}=require('../models/courseOptions');
 
-const CourseTypes=Mongoose.model("CourseTypes",CourseType);
+
 Router.post("/",async(req,res)=>{  
     const {error}=CourseTypeValidation(req.body);
     if(error)return res.status(400).send("Incorrect Info");
@@ -48,5 +48,4 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports={"courseTypes":Router,
-               "CourseTypeDocument":CourseTypes};
+module.exports={"courseTypes":Router};

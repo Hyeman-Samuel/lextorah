@@ -1,8 +1,7 @@
 const express = require('express');
 const Mongoose=require('mongoose');
 const Router= express.Router();
-const {CourseLevel,CourseLevelValidation}=require('../models/courseOptions');
-const CourseLevels=Mongoose.model("CourseLevels",CourseLevel);
+const {CourseLevelValidation,CourseLevels}=require('../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    
@@ -48,5 +47,4 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports={"courseLevels":Router,
-                "CourseLevelDocument":CourseLevels};
+module.exports={"courseLevels":Router};

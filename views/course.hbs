@@ -1,0 +1,25 @@
+<h1>These will display the courses</h1>
+
+{{#each AllCourses}}
+<form action="/enroll/personalinfo" method="get">
+    <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{Title}}</h4>
+    <p class="card-text">Some example text. Some example text.</p>
+    <ul>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+        <li> <p class="card-text">Some example text. Some example text.</p></li>
+    </ul>
+    <button type="submit" title="Enroll" name="course" value="{{_id}}">{{_id}} Enroll<button>
+  </div>
+</div>
+    
+
+    
+</form>
+{{/each}}

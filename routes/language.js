@@ -1,9 +1,7 @@
 const express = require('express');
 const Mongoose=require('mongoose');
 const Router= express.Router();
-const {Language,LanguageValidation}=require('../models/courseOptions');
-const Languages=Mongoose.model("Languages",Language);
-
+const {Language,LanguageValidation,Languages}=require('../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    
@@ -49,5 +47,4 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports={"languages":Router,
-                 "LanguageDocument":Languages};
+module.exports={"languages":Router};

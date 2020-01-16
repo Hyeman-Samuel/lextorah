@@ -2,11 +2,7 @@ const Joi=require('joi');
 Joi.objectId=require('joi-objectid')(Joi);
 const Mongoose=require('mongoose');
 const _=require('lodash');
-const {CourseSchedule,PersonalInformation,PersonalInformationValidation}=require('./courseOptions');
-const {LanguageDocument}=require("../routes/language");
-const {CourseTypeDocument}=require("../routes/courseType");
-const {CourseLevelDocument}=require("../routes/courseLevel");
-const {CityDocument}=require("../routes/city");
+const {CourseSchedule,PersonalInformation,Languages,CourseTypes,Cities,CourseLevels}=require('./courseOptions');
 
 const CourseSchema=new Mongoose.Schema({
     "Title":{type:String,required:true},
@@ -20,6 +16,7 @@ const CourseSchema=new Mongoose.Schema({
     "Schedule":{type:CourseSchedule},
     "Students":[PersonalInformation]
 })
+const Courses= Mongoose.model('Courses',CourseSchema);
 
 async function ValidateCourse(Course){
     const Schema ={
@@ -32,10 +29,10 @@ async function ValidateCourse(Course){
         "EndDate":Joi.date().required(),
         "Price":Joi.number().required()
     }
-    const Language=await LanguageDocument.findById(Course.Language);
-    const CourseLevel=await CourseLevelDocument.findById(Course.CourseLevel);
-    const CourseType=await CourseTypeDocument.findById(Course.CourseType);
-    const City=await CityDocument.findById(Course.City);
+    const Language=await Languages.findById(Course.Language);
+    const CourseLevel=await CourseLevels.findById(Course.CourseLevel);
+    const CourseType=await CourseTypes.findById(Course.CourseType);
+    const City=await Cities.findById(Course.City);
 
    if(!Language&&!CourseLevel&&!City&&!CourseType){
      return {"NotFoundError":"Invalid.Language/City/CourseType/CourseLevel no longer exists "}
@@ -45,5 +42,6 @@ async function ValidateCourse(Course){
 
 module.exports={
     "courseSchemas":CourseSchema,
-    "CourseValidation":ValidateCourse
+    "CourseValidation":ValidateCourse,
+    "Courses":Courses
 };

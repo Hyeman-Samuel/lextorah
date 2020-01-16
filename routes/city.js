@@ -1,8 +1,7 @@
 const express = require('express');
 const Mongoose=require('mongoose');
 const Router= express.Router();
-const {City,CityValidation}=require('../models/courseOptions');
-const Cities=Mongoose.model("Cities",City);
+const {CityValidation,Cities}=require('../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    
@@ -48,5 +47,4 @@ Router.delete("/:id",async(req,res)=>{
   }
 });
 
-module.exports={"cities":Router,
-                 "CityDocument":Cities};
+module.exports={"cities":Router};

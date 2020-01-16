@@ -1,0 +1,72 @@
+
+                <div class="card-body">
+                    <form method="GET" enctype="application/x-www-form-urlencoded" action="/enroll/course">          
+                        <div class="form-row">
+                            <div class="name">Language</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Language">
+                                            <option disabled="disabled" selected="selected">Choose Language</option>
+                                             {{#each SelectDropDownItems.languages}}
+                                             <option value="{{_id}}">{{title}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="City">
+                                            <option disabled="disabled" selected="selected">Choose City</option>
+                                              {{#each SelectDropDownItems.cities}}
+                                             <option value="{{_id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Type</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="CourseLevel">
+                                            <option disabled="disabled" selected="selected">Choose Level</option>                                          
+                                            {{#each SelectDropDownItems.courseLevels}}
+                                             <option value="{{_id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Subject</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="CourseType">
+                                            <option disabled="disabled" selected="selected">Choose Type of Course</option>
+                                              {{#each SelectDropDownItems.courseTypes}}
+                                             <option value="{{_id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--green" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>

@@ -1,0 +1,193 @@
+
+    <div class="card-body">
+        <form method="post" enctype="application/x-www-form-urlencoded" action="/enroll/payment">
+            <div class="form-row m-b-55">
+                <div class="name">Name</div>
+                <div class="value">
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="FirstName">
+                                <label class="label--desc">first name</label>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="SurName">
+                                <label class="label--desc">last name</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Date of Birth</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="js-datepicker" type="text" placeholder="Date of Birth" name="DateOfBirth">
+                    </div>
+                </div>
+            </div>       
+            <div class="form-row">
+                <div class="name">Gender</div>
+                <div class="value">
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="Gender">
+                                <option disabled="disabled" selected="selected">Choose Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="RatherNotSay">Rather Not Say</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Email</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="email" name="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row m-b-55">
+                <div class="name">Phone</div>
+                <div class="value">
+                    <div class="row row-refine">
+                        <div class="col-3">
+                            <h3>+234</h3>
+                        </div>
+                        <div class="col-9">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="number" name="Phone">
+                                <label class="label--desc">Phone Number</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Address1</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="Address1">
+                    </div>
+                </div>
+            </div>
+             <div class="form-row">
+                <div class="name">Address2</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="Address2">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Town</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="Town">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="name">Nationality</div>
+                <div class="value">
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="Nationality">
+                                <option disabled="disabled" selected="selected">Choose option</option>
+                                <option value="subject1">Subject 1</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Emergency Contact</h2>
+            <div class="form-row">
+                <div class="name">Name</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="EmergencyContactName">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Relationship</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="EmergencyContactRelationship">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Phone</div>
+                <div class="value">
+                    <div class="row row-refine">
+                        <div class="col-3">
+                            <h3>+234</h3>
+                        </div>
+                        <div class="col-9">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="number" name="EmergencyContactPhoneNumber">
+                                <label class="label--desc">Phone Number</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="form-row">
+                <div class="name">Email</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="email" name="EmergencyContactEmail">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Who refeered you to Lextorah?</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="RefeeralSource">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">What is your reason for taking this course?</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="Reason">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Do you have any concerns?</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="OtherConcerns">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row p-t-20">
+                <label class="label label--block">Do you want to receive news relating to your course </label>
+                <div class="p-t-15">
+                    <label class="radio-container m-r-55">Yes
+                        <input type="radio" checked="checked" value="true" name="IsNotifyable">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">No
+                        <input type="radio" value="false" name="IsNotifyable">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn--radius-2 btn--red" name="courseId" value="{{courseId}}"  type="submit">Make Payment</button>
+            </div>
+        </form>
+    </div>
