@@ -1,8 +1,6 @@
 const express = require('express');
-const Mongoose=require('mongoose');
 const Router= express.Router();
-const {CourseTypeValidation,CourseTypes}=require('../models/courseOptions');
-
+const {CourseTypeValidation,CourseTypes}=require('../../models/courseOptions');
 
 Router.post("/",async(req,res)=>{  
     const {error}=CourseTypeValidation(req.body);

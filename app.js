@@ -7,7 +7,7 @@ const {cities}=require('./routes/city');
 const {course}=require('./routes/course');
 const {courseLevels}=require('./routes/courseLevel');
 const {courseTypes}=require('./routes/courseType');
-const {enroll}=require('./routes/enroll');
+const {enroll}=require('./controllers/enroll');
 const app =Express();
 const path =require("path");
 app.use(BodyParser.urlencoded());

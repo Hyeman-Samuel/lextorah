@@ -1,7 +1,6 @@
 const express = require('express');
-const Mongoose=require('mongoose');
 const Router= express.Router();
-const {Language,LanguageValidation,Languages}=require('../models/courseOptions');
+const {LanguageValidation,Languages}=require('../../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    
@@ -38,6 +37,7 @@ Router.put("/:id",async(req,res)=>{
     //logger
     }   
 });
+
 Router.delete("/:id",async(req,res)=>{
   try{
       const language=await Languages.findByIdAndDelete(req.params.id);

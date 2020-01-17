@@ -1,9 +1,9 @@
 const express = require('express');
 const Router= express.Router();
 const _=require("lodash");
-const {Courses}=require('../models/courseModel');
-const {Languages,Cities,CourseLevels,CourseTypes,PersonalInformationValidation}=require("../models/courseOptions");
-const {verifyPayment,initializePayment}=require('../models/paystack')();
+const {Courses}=require("../../models/courseModel");
+const {Languages,Cities,CourseLevels,CourseTypes,PersonalInformationValidation}=require("../../models/courseOptions");
+const {verifyPayment,initializePayment}=require('../../models/paystack')();
 
 ////1 Select A course nature
 Router.get("/courseform",async(req,res)=>{
