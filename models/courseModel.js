@@ -2,7 +2,7 @@ const Joi=require('joi');
 Joi.objectId=require('joi-objectid')(Joi);
 const Mongoose=require('mongoose');
 const _=require('lodash');
-const {CourseSchedule,PersonalInformation,Languages,CourseTypes,Cities,CourseLevels}=require('./courseOptions');
+const {CourseSchedule,Languages,CourseTypes,Cities,CourseLevels}=require('./courseOptions');
 
 const CourseSchema=new Mongoose.Schema({
     "Title":{type:String,required:true},
@@ -14,7 +14,7 @@ const CourseSchema=new Mongoose.Schema({
     "EndDate":{type:Date,required:true},
     "Price":{type:Number,default:0},
     "Schedule":{type:CourseSchedule},
-    "Students":[PersonalInformation]
+    "Students":[{type:Mongoose.Schema.Types.ObjectId,ref:"Students"}]
 })
 const Courses= Mongoose.model('Courses',CourseSchema);
 

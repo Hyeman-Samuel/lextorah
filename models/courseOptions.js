@@ -74,17 +74,17 @@ const CourseScheduleSchema=new Mongoose.Schema({
 const PersonalInformation=new Mongoose.Schema({
     "FirstName":{type:String,required:true,max:20},
     "SurName":{type:String,required:true,max:20},
-    "DateOfBirth":{type:Date,required:true},
+    "DateOfBirth":{type:String,required:true},
     "Gender":{type:String,required:true},
     "Email":{type:String,required:true,max:50},
-    "Phone":{type:Number,required:true,max:15},
+    "Phone":{type:String,required:true,max:15},
     "Address1":{type:String,required:true,max:50},
     "Address2":{type:String,max:50},
     "Town":{type:String,required:true},
     "Nationality":{type:String,required:true},
     "EmergencyContactName":{type:String,required:true,max:15},
     "EmergencyContactRelationship":{type:String,required:true,max:15},
-    "EmergencyContactPhoneNumber":{type:Number,required:true,max:13},
+    "EmergencyContactPhoneNumber":{type:String,required:true,max:15},
     "EmergencyContactEmail":{type:String,required:true,max:50},
     "IsNotifyable":{type:Boolean},
     "RefeeralSource":{type:String,max:20},
@@ -92,6 +92,7 @@ const PersonalInformation=new Mongoose.Schema({
     "OtherConcerns":{type:String,max:100},
     "HasPaid":{type:Boolean,default:false},
 })
+const Students=Mongoose.model("Students",PersonalInformation);
 
 function ValidateStudent(PersonalInformation){
     const schema={
@@ -100,14 +101,14 @@ function ValidateStudent(PersonalInformation){
     "DateOfBirth":Joi.string().required(),
     "Gender":Joi.string().required(),
     "Email":Joi.string().max(50).required(),
-    "Phone":Joi.string().max(15).required(),
+    "Phone":Joi.string().max(20).required(),
     "Address1":Joi.string().max(50).required(),
     "Address2":Joi.string().max(50),
     "Town":Joi.string().required(),
     "Nationality":Joi.string().required(),
-    "EmergencyContactName":Joi.string().max(15).required(),
+    "EmergencyContactName":Joi.string().max(50).required(),
     "EmergencyContactRelationship":Joi.string().max(15).required(),
-    "EmergencyContactPhoneNumber":Joi.string().max(13).required(),
+    "EmergencyContactPhoneNumber":Joi.string().max(20).required(),
     "EmergencyContactEmail":Joi.string().max(50).required(),
     "RefeeralSource":Joi.string().max(20),
     "Reason":Joi.string().max(100).required(),
@@ -134,5 +135,6 @@ module.exports={
     "Languages":Languages,
     "CourseTypes":CourseTypes,
     "CourseLevels":CourseLevels,
-    "Cities":Cities
+    "Cities":Cities,
+    "Students":Students
 }

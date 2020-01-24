@@ -1,4 +1,4 @@
-
+<h1>{{error}}</h1>
     <div class="card-body">
         <form method="post" enctype="application/x-www-form-urlencoded" action="/enroll/payment">
             <div class="form-row m-b-55">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row m-b-55">
+            {{!-- <div class="form-row m-b-55">
                 <div class="name">Phone</div>
                 <div class="value">
                     <div class="row row-refine">
@@ -67,8 +67,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
             <div class="form-row">
+                <div class="name">Phone</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="number" name="Phone">
+                    </div>
+                </div>
+            </div>
+              <div class="form-row">
                 <div class="name">Address1</div>
                 <div class="value">
                     <div class="input-group">
@@ -76,6 +85,7 @@
                     </div>
                 </div>
             </div>
+
              <div class="form-row">
                 <div class="name">Address2</div>
                 <div class="value">
@@ -124,6 +134,15 @@
                     </div>
                 </div>
             </div>
+              <div class="form-row">
+                <div class="name">Phone</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="number" name="EmergencyContactPhoneNumber">
+                    </div>
+                </div>
+            </div>
+{{!-- 
             <div class="form-row">
                 <div class="name">Phone</div>
                 <div class="value">
@@ -133,13 +152,13 @@
                         </div>
                         <div class="col-9">
                             <div class="input-group-desc">
-                                <input class="input--style-5" type="number" name="EmergencyContactPhoneNumber">
+                                <input class="input--style-5" type="number" name="">
                                 <label class="label--desc">Phone Number</label>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             
              <div class="form-row">
                 <div class="name">Email</div>
