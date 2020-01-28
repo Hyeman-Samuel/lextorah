@@ -1,6 +1,6 @@
 const express = require('express');
 const Router= express.Router();
-const {CourseValidation,Courses}=require('../../models/courseModel');
+const {CourseValidation,Courses}=require('../models/courseModel');
 
 Router.post("/",async(req,res)=>{ 
     const { error,NotFoundError }= await CourseValidation(req.body);

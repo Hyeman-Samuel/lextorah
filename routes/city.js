@@ -1,6 +1,6 @@
 const express = require('express');
 const Router= express.Router();
-const {CityValidation,Cities}=require('../../models/courseOptions');
+const {CityValidation,Cities}=require('../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    

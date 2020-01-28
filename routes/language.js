@@ -1,6 +1,6 @@
 const express = require('express');
 const Router= express.Router();
-const {LanguageValidation,Languages}=require('../../models/courseOptions');
+const {LanguageValidation,Languages}=require('../models/courseOptions');
 
 Router.post("/",async(req,res)=>{
     console.log(req.body);    
